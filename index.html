@@ -30,10 +30,11 @@
       <section class="card-summary">
         <article>
           <h3>Summary</h3>
-          <ul id="user-stats"></ul>
-        </article>
+          <ul id="user-stats">
 
-        <button>Continue</button>
+          </ul>
+          <button>Continue</button>
+        </article>
       </section>
     </div>
   </main>
@@ -53,8 +54,8 @@
           const listItem = document.createElement('li');
           const grpStats = document.createElement('div');
           grpStats.innerHTML = `
-          <div>
-              <div>
+          <div class="link-div">
+              <div class="category">
                 <img src="${stats.icon}" alt="Icon">
                 <p>${stats.category}</p>
               </div>
