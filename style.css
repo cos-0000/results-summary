@@ -72,41 +72,43 @@ main {
 	justify-content: center;
 	flex-wrap: wrap;
 	align-items: center;
-	max-width: 100%;
-	height: 400px;
+	max-width: 700px;
+	height: auto;
 	margin: var(--sz-100);
 	border-radius: var(--sz-150);
 	box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.1);
 }
 section {
-	height: 100%;
+	height: auto;
 	flex: 1 1 50%;
-	padding: var(--sz-150);
+	padding: var(--sz-200) var(--sz-150);
 }
 .link-div,
 .category {
 	display: flex;
 }
+.category {
+	margin-right: var(--sz-300);
+}
+
 .link-div {
 	justify-content: space-between;
 	align-items: center;
 	padding: var(--sz-50);
 }
+
 .category img {
 	margin-right: var(--sz-50);
 }
-ul {
-	padding: var(--sz-50);
-}
+
 li {
 	list-style-type: none;
-	margin-bottom: 10px;
-	border-radius: 10px;
+	margin-bottom: 15px;
+	border-radius: 5px;
 }
 
 .card-result {
 	color: var(--clr-light-lavander);
-	height: 100%;
 	background: linear-gradient(
 		to bottom,
 		var(--clr-bg-sblue),
@@ -120,7 +122,6 @@ li {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	padding: var(--sz-50);
 }
 .circle {
 	display: flex;
@@ -129,7 +130,7 @@ li {
 	text-align: center;
 	width: 150px;
 	height: 150px;
-	margin: var(--sz-150) 0;
+	margin: var(--sz-100) 0;
 	border-radius: 50%;
 	background: linear-gradient(
 		to bottom,
@@ -138,16 +139,61 @@ li {
 	);
 }
 .circle div > p {
+	text-align: center;
 	color: var(--clr-white);
 	font-weight: var(--fw-800);
 	font-size: var(--sz-300);
 }
 h2 + p {
-	width: 80%;
+	width: 85%;
+	line-height: 1.5;
+	flex: 1;
 	text-align: center;
-	padding-top: var(--sz-50);
+	margin-top: var(--sz-50);
 }
-
+.card-summary ul {
+	margin: var(--sz-150) 0;
+}
+.btn {
+	display: flex;
+	justify-content: center;
+	align-self: flex-end;
+}
+button {
+	flex: 1;
+	cursor: pointer;
+	border: none;
+	font-size: var(--sz-100);
+	font-weight: var(--fw-700);
+	color: var(--clr-light-lavander);
+	background-color: var(--clr-darkgray-blue);
+	padding: var(--sz-50);
+	border-radius: 20px;
+	transition: background-color 0.3s ease;
+}
+button:hover {
+	background: linear-gradient(
+		to bottom,
+		var(--clr-bg-rblue),
+		var(--clr-bg-sblue)
+	);
+}
+.attribution {
+	margin-top: var(--sz-100);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+a {
+	text-decoration: none;
+	color: var(--clr-darkgray-blue);
+	font-weight: var(--fw-700);
+	transition: border-bottom 2s ease-in-out;
+}
+a:hover {
+	border-bottom: 3px solid var(--stats-bg-teal);
+}
 li:nth-child(1) {
 	background-color: var(--stats-bg-red);
 }
@@ -160,32 +206,75 @@ li:nth-child(3) {
 li:nth-child(4) {
 	background-color: var(--stats-bg-blue);
 }
+li:nth-child(1) .link-div .category > p {
+	color: var(--clr-stats-red);
+}
+li:nth-child(2) .link-div .category > p {
+	color: var(--clr-stats-yellow);
+}
+li:nth-child(3) .link-div .category > p {
+	color: var(--clr-stats-teal);
+}
+li:nth-child(4) .link-div .category > p {
+	color: var(--clr-stats-blue);
+}
 
-/* button {
-	border: none;
-	font-size: var(--sz-100);
-	font-weight: var(--fw-700);
-	color: var(--clr-light-lavander);
-	background-color: var(--clr-darkgray-blue);
-	padding: var(--sz-50) 5rem;
-	border-radius: 20px;
-} */
+li:nth-child(1) .link-div .category + p > b {
+	color: var(--clr-darkgray-blue);
+	margin-right: var(--sz-50);
+}
+li:nth-child(2) .link-div .category + p > b {
+	color: var(--clr-darkgray-blue);
+	margin-right: var(--sz-50);
+}
+li:nth-child(3) .link-div .category + p > b {
+	color: var(--clr-darkgray-blue);
+	margin-right: var(--sz-50);
+}
+li:nth-child(4) .link-div .category + p > b {
+	color: var(--clr-darkgray-blue);
+	margin-right: var(--sz-50);
+}
 
 @media (max-width: 320px) {
+	h2 + p {
+		width: 90%;
+		font-size: 14px;
+		line-height: 1.3;
+		flex: 1;
+		text-align: center;
+		margin-top: var(--sz-50);
+	}
+}
+@media (max-width: 700px) {
 	html,
 	body {
 		align-items: flex-start;
 	}
 	.container {
 		margin: 0;
+		align-items: center;
+		justify-content: center;
+		border-radius: 0;
+		box-shadow: none;
+		height: 100%;
 	}
 	.card-result {
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
 	}
-	h2 + p {
-		font-size: 12px;
-		width: 100%;
-		text-align: center;
+	button {
+		padding: var(--sz-100);
+		border-radius: 30px;
+	}
+	section {
+		flex: 1 1 100%;
+		margin: 0;
+		padding: var(--sz-150);
+	}
+	.card-result article {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }

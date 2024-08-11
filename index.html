@@ -31,19 +31,18 @@
         <article>
           <h3>Summary</h3>
           <ul id="user-stats">
-
           </ul>
-          <button>Continue</button>
+          <div class="btn"><button>Continue</button></div>
         </article>
       </section>
     </div>
+    <div class="attribution">
+      <div>Challenge by <a rel="noopener" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
+          Mentor</a></div>
+      <div>Coded by <a rel="noopener" href="https://github.com/cos-0000">Chie</a></div>
+    </div>
   </main>
 
-
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
 
   <script>
     fetch('data.json')
@@ -57,9 +56,9 @@
           <div class="link-div">
               <div class="category">
                 <img src="${stats.icon}" alt="Icon">
-                <p>${stats.category}</p>
+                <p><b>${stats.category}</b></p>
               </div>
-              <p>${stats.score}/100</p>
+              <p><b>${stats.score}</b>/ 100</p>
           </div>
 `;
 
