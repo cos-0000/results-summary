@@ -145,6 +145,11 @@ li {
 	font-size: var(--sz-300);
 }
 h2 + p {
+	color: linear-gradient(
+		to bottom,
+		var(--clr-white),
+		var(--clr-light-lavander)
+	);
 	width: 85%;
 	line-height: 1.5;
 	flex: 1;
