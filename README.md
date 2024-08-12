@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [FE-Results-summary-repository](https://github.com/cos-0000/results-summary)
-- Live Site URL: [FE-Results-summary-site](https://your-live-site-url.com)
+- Live Site URL: [FE-Results-summary-site](https://cos-0000.github.io/results-summary/)
 
 ### Built with
 
